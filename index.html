@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>復原你的Apple帳號</title>
     <link rel="stylesheet" href="base-debug.css">
-    <link rel="stylesheet" href="Apple.css">
 </head>
 <body>
-<div class="navbar">
-    <img src="img/apple LOGO.png" alt="Apple Logo">
+<!--導覽列-->
+<header class="navbar">
+    <img src="img/apple-logo.png" alt="Apple-Logo">
+    <nav>
     <a href="#">商店</a>
     <a href="#">Mac</a>
     <a href="#">iPad</a>
@@ -19,35 +19,38 @@
     <a href="#">娛樂</a>
     <a href="#">配件</a>
     <a href="#">支援服務</a>
+    </nav>
+    <div class="nav-icons">
     <img src="img/search.png" alt="search Logo">
     <img src="img/buy.png" alt="buy Logo">
-</div>
-<div class="container">
-    <h2>Apple帳號</h2>
-    <a>登入</a>
-    <a>常見問題集</a>
-</div>
-<div class="pwd">
-    <img src="img/Apple圖片.jpg" alt="pwd Logo">
-    <a>忘記密碼?</a>
-    <a>請驗證帳號資訊，以重置密碼。</a>
-    <button>重置密碼</button>
-</div>
-<footer>
-    <div class="footer">
-        <a>更多選購方式：尋找當地的 Apple 直營店或其他零售商，或致電 0800-020-021。</a>
-        <a>Copyright © 2025 Apple Inc. 保留一切權利。</a>
-        <a>隱私權政策|</a>
-        <a>使用條款|</a>
-        <a>網站地圖|</a>
-        <a>銷售及退款|</a>
-        <a>法律聲明|</a>
-        <a>網站地圖|</a>
     </div>
-    <a>台灣</a>
-    <div class="footer2">
+    <div class="nav-right">
+    <a href="#">Apple帳號</a>
+    <a href="#">登入</a>
+    <a href="#">常見問題集</a>
+    </div>
+</header>
+<!--主內容-->
+<main class="container">
+    <img src="img/Apple圖片.jpg" alt="Apple圖片">
+    <h2>忘記密碼?</h2>
+    <p>請驗證帳號資訊，以重置密碼。</p>
+    <button class="blue-btn">重置密碼</button>
+    </main>
+<!--頁尾-->
+<footer class="footer-link">
+        <p>更多選購方式：尋找當地的 Apple 直營店或其他零售商，或致電 0800-020-021。</p>
+        <p>©  2025 Apple Inc. 保留一切權利。</p>
+    <nav class="footer-nav">
+        <a href="#">隱私權政策</a>
+        <a href="#">使用條款</a>
+        <a href="#">銷售及退款</a>
+        <a href="#">法律聲明</a>
+        <a href="#">網站地圖</a>
+        <a href="#">台灣</a>
+    </nav>
 </footer>
-
+<!--輔助按鈕-->
 <button onclick="toggleDebug()">切換格線輔助</button>
 
 <script>
@@ -55,7 +58,6 @@
         document.body.classList.toggle('debug');
     }
 </script>
-<script src="Apple.js"></script>
 
 </body>
 </html>
