@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 🔹 導覽列第一層外框 */
+.navbar {
+    background-color: #fff;
+}
+
+/* 第一列：導覽選單 + 右側 */
+.navbar-top {
+    text-decoration: none;    /* 移除底線 */
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* 左邊 Apple Logo */
+.nav-left,
+.nav-right {
+    flex: 0;
+}
+
+
+/* 中間主選單 */
+.nav-center {
+    flex: 1;                      /* 撐滿中間空間 */
+    display: flex;
+    justify-content: space-between; /* 平均打散 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.nav-center li {
+    flex: 1;                         /* 讓每個 li 平均寬度 */
+    text-align: center;              /* 文字置中 */
+}
+.nav-center a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+}
+
+
+/* 右邊搜尋與購物車 */
+.nav-right {
+    justify-content: flex-end;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    gap: 1rem;
+}
+
+
+.navbar-top img {
+    width: 18px;
+    height: auto;
+    vertical-align: middle;
+}
+
+
+/* 第二列容器 → 左右並排 Flex */
+.navbar-bottom {
+    background-color: #fff;
+
+    padding: 1rem 20px 0.8rem;
+}
+
+
+/* 包含內容的內部排版容器 */
+.navbar-subtitle-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* 補上內距，防止左右貼邊 */
+    border-bottom: 1px solid #ddd; /* Apple 的那一條線在這裡 */
+}
+
+
+/* 左：Apple 帳號 */
+.navbar-subtitle1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111;
+}
+
+/* 右：登入、常見問題集 */
+.navbar-subtitle2 {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.navbar-subtitle2 a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* 🔹 主內容（可自訂） */
+.main {
+    text-align: center;
+    padding: 3rem 1rem;
+    line-height: 2;          /* 行距拉高 */
+}
+
+.main-logo {
+    width: 320px;
+    max-width: 80vw;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.button {
+    font-size: 1rem;
+    background-color: #0071e3;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+
+/* 頁尾 */
+.footer {
+    background-color: #f5f5f7;
+    font-size: 12px;
+    color: #6e6e73;
+    padding: 20px 24px;
+    margin-bottom: 0;
+    margin-top: auto; /* 會自動推到底部 */
+
+}
+
+.footer-content {
+    max-width: 980px;
+    margin: 0 auto;
+
+}
+
+.footer-note {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-links {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+.footer-links li {
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+.footer-links li::after {
+    content: "|";
+    position: absolute;
+    right: -0.5rem;
+    color: #6e6e73;
+}
+
+.footer-links li:last-child::after {
+    content: "";
+}
+
+.footer-links a {
+    color: #6e6e73;
+    text-decoration: none;
+}
+
+.footer-copy {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.footer-links {
+    justify-content:flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.footer-links li {
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+/* 加上分隔線 | */
+.footer-links li::after {
+    content: "|";
+    position: absolute;
+    right: -0.5rem;
+    color: #6e6e73;
+}
+
+/* 最後一個不要出現 | */
+.footer-links li:last-child::after {
+    content: "";
+}
+.footer-location{
+    list-style: none;         /* 移除點點 */
+    text-decoration: none;    /* 移除底線 */
+}
