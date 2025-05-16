@@ -1,63 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="base-debug.css">
+    <title>Apple 重設密碼</title>
+    <link rel="stylesheet" href="apple.css">
 </head>
 <body>
-<!--導覽列-->
+
+<!-- 🔹 兩列導覽列 -->
 <header class="navbar">
-    <img src="img/apple-logo.png" alt="Apple-Logo">
-    <nav>
-        <a href="#">商店</a>
-        <a href="#">Mac</a>
-        <a href="#">iPad</a>
-        <a href="#">iPhone</a>
-        <a href="#">Watch</a>
-        <a href="#">AirPods</a>
-        <a href="#">TV和家庭</a>
-        <a href="#">娛樂</a>
-        <a href="#">配件</a>
-        <a href="#">支援服務</a>
-    </nav>
-    <div class="nav-icons">
-        <img src="img/search.png" alt="search Logo">
-        <img src="img/buy.png" alt="buy Logo">
+    <!-- 第一列 -->
+    <div class="navbar-top">
+        <div class="nav-section nav-left">
+            <img src="img/apple-logo.png" alt="Apple Logo" />
+        </div>
+
+        <ul class="nav-section nav-center">
+            <li><a href="#">商店</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">TV 和家庭</a></li>
+            <li><a href="#">娛樂</a></li>
+            <li><a href="#">配件</a></li>
+            <li><a href="#">支援服務</a></li>
+        </ul>
+
+        <ul class="nav-section nav-right">
+            <li><img src="img/search.png" alt="搜尋" /></li>
+            <li><img src="img/bag.png" alt="購物車" /></li>
+        </ul>
     </div>
-    <div class="nav-right">
-        <a href="#">Apple帳號</a>
-        <a href="#">登入</a>
-        <a href="#">常見問題集</a>
+
+
+    <!-- 第二列 -->
+    <div class="navbar-bottom">
+        <div class="navbar-subtitle-container">
+            <div class="navbar-subtitle1">Apple 帳號</div>
+            <div class="navbar-subtitle2">
+                <a href="#">登入</a>
+                <a href="#">常見問題集</a>
+            </div>
+        </div>
     </div>
 </header>
-<!--主內容-->
-<main class="container">
-    <img src="img/Apple圖片.jpg" alt="Apple圖片">
-    <h2>忘記密碼?</h2>
-    <p>請驗證帳號資訊，以重置密碼。</p>
-    <button class="blue-btn">重置密碼</button>
-</main>
-<!--頁尾-->
-<footer class="footer-link">
-    <p>更多選購方式：尋找當地的 Apple 直營店或其他零售商，或致電 0800-020-021。</p>
-    <p>©  2025 Apple Inc. 保留一切權利。</p>
-    <nav class="footer-nav">
-        <a href="#">隱私權政策</a>
-        <a href="#">使用條款</a>
-        <a href="#">銷售及退款</a>
-        <a href="#">法律聲明</a>
-        <a href="#">網站地圖</a>
-        <a href="#">台灣</a>
-    </nav>
-</footer>
-<!--輔助按鈕-->
-<button onclick="toggleDebug()">切換格線輔助</button>
 
-<script>
-    function toggleDebug() {
-        document.body.classList.toggle('debug');
-    }
-</script>
+<!-- 🔹 主區塊可放其他內容 -->
+<main class="main">
+    <img class="main-logo" src="img/Apple.jpg" alt="Apple Logo" />
+    <h1>忘記密碼？</h1>
+    <p>請驗證帳號資訊，以重置密碼。</p>
+    <button class="button">重置密碼</button>
+</main>
+
+<!-- 頁尾 -->
+<footer class="footer">
+    <div class="footer-content">
+
+        <p class="footer-note">
+            更多選購方式：<a href="#">尋找當地的 Apple 直營店或其他零售商</a>，或致電 0800-020-021。
+        </p>
+
+        <!-- 這整行會排成一橫列 -->
+        <div class="footer-bottom-row">
+            <div class="footer-bottom-row">
+                <p class="footer-copy">
+                    © 2025 Apple Inc. 保留一切權利。
+                </p>
+                <ul class="footer-links">
+                    <li><a href="#">隱私權政策</a></li>
+                    <li><a href="#">使用條款</a></li>
+                    <li><a href="#">銷售及退款</a></li>
+                    <li><a href="#">法律聲明</a></li>
+                    <li><a href="#">網站地圖</a></li>
+                </ul>
+            </div>
+            <div class="footer-location">
+        <li><a href="#">台灣</a></li>
+            </div>
+
+    </div>
+</footer>
+
+
 
 </body>
 </html>
