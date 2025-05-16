@@ -34,9 +34,9 @@ body {
 /* 左邊 Apple Logo */
 .nav-left,
 .nav-right {
+    width: 600px;
     flex: 0;
 }
-
 
 /* 中間主選單 */
 .nav-center {
@@ -60,7 +60,6 @@ body {
     color: #333;
 }
 
-
 /* 右邊搜尋與購物車 */
 .nav-right {
     justify-content: flex-end;
@@ -74,7 +73,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1024px;
+    max-width: 1020px;
     margin: 0 auto;
     padding: 12px 20px;
     gap: 1rem;
@@ -82,7 +81,7 @@ body {
 
 
 .navbar-top img {
-    width: 18px;
+    width: 16px;
     height: auto;
     vertical-align: middle;
 }
@@ -91,7 +90,6 @@ body {
 /* 第二列容器 → 左右並排 Flex */
 .navbar-bottom {
     background-color: #fff;
-
     padding: 1rem 20px 0.8rem;
 }
 
@@ -107,12 +105,13 @@ body {
     border-bottom: 1px solid #ddd; /* Apple 的那一條線在這裡 */
 }
 
-
 /* 左：Apple 帳號 */
 .navbar-subtitle1 {
     font-size: 1.25rem;
     font-weight: 600;
     color: #111;
+    padding: 1rem;
+    margin: -0.5rem;
 }
 
 /* 右：登入、常見問題集 */
