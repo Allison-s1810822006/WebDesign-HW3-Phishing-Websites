@@ -1,3 +1,8 @@
+//index-html-點選重置密碼
+function showResetForm() {
+    document.getElementById('reset-form').style.display = 'block';
+}
+//rest-html-點選繼續按鈕
 const accountInput = document.getElementById('account');
 const passwordInput = document.getElementById('password');
 const submitBtn = document.getElementById('submitBtn');
@@ -14,3 +19,9 @@ function validateInput() {
 
 accountInput.addEventListener('input', validateInput);
 passwordInput.addEventListener('input', validateInput);
+
+// 響應式設計手機模式
+function toggleMenu() {
+    const menu = document.querySelector('.nav-center');
+    menu.classList.toggle('show');
+}

@@ -346,4 +346,41 @@ body {
     cursor: not-allowed;
     opacity: 0.7;
 }
+/*響應式設計*/
+/* 漢堡圖示隱藏，等到小螢幕才顯示 */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 1rem;
+}
 
+/* 導覽列初始手機版隱藏 */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-center {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .nav-center.show {
+        display: flex;
+    }
+
+    .nav-center li {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+}
