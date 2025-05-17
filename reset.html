@@ -5,7 +5,6 @@
     <title>重置密碼</title>
     <link rel="stylesheet" href="apple.css">
 </head>
-<body>
 <body class="reset-page">
 <!-- 🔹 上方兩列導覽列 -->
 <header class="navbar">
@@ -53,16 +52,17 @@
         <div class="reset-form">
             <h1>重置密碼</h1>
             <p>請輸入帳號使用的電子郵件地址或電話號碼以繼續。</p>
+            <!--            新增輸入的提示-->
+            <input type="text" id="account" placeholder="電子郵件地址或電話號碼" class="input-field" />
+            <input type="password" id="password" placeholder="請輸入密碼" class="input-field" />
 
-            <input type="text" placeholder="電子郵件地址或電話號碼" class="input-field" />
-            <input type="text" placeholder="請輸入圖中的字元" class="input-field" />
-
-            <div class="captcha-row">
-                <img src="img/new-code.jpg" alt="驗證碼" class="captcha-img" />
-                <div class="captcha-links">
-                    <img src="img/new-code1.jpg" alt="驗證碼" class="captcha-img" />
-                </div>
-            </div>
+            <!--            <input type="text" placeholder="請輸入圖中的字元" class="input-field" />-->
+            <!--            <div class="captcha-row">-->
+            <!--                <img src="img/new-code.jpg" alt="驗證碼" class="captcha-img" />-->
+            <!--                <div class="captcha-links">-->
+            <!--                    <img src="img/new-code1.jpg" alt="驗證碼" class="captcha-img" />-->
+            <!--                </div>-->
+            <!--            </div>-->
 
             <button class="button" id="submitBtn" disabled>繼續</button>
         </div>
@@ -77,6 +77,7 @@
                 </p>
             </div>
         </div>
+    </div>
 </main>
 
 
