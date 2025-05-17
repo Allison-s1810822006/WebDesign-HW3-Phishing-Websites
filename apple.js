@@ -23,5 +23,7 @@ passwordInput.addEventListener('input', validateInput);
 // 響應式設計手機模式
 function toggleMenu() {
     const menu = document.querySelector('.nav-center');
+    const icons = document.querySelector('.nav-right');
     menu.classList.toggle('show');
+    icons.classList.toggle('show');
 }
