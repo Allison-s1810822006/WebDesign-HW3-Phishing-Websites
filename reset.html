@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="apple.css">
 </head>
 <body>
+<body class="reset-page">
 <!-- 🔹 上方兩列導覽列 -->
 <header class="navbar">
     <div class="navbar-top">
@@ -63,18 +64,19 @@
                 </div>
             </div>
 
-            <button class="button">繼續</button>
+            <button class="button" id="submitBtn" disabled>繼續</button>
         </div>
 
         <!-- 右邊說明區塊 -->
         <div class="reset-info">
-            <img src="img/inspect-icon.jpg" alt="帳號圖示" class="info-icon" />
-            <p>
-                歡迎莅臨此處重置你忘記的密碼。<br />
-                基於安全考量，我們會詢問你幾個問題，以驗證你確實擁有此帳號。
-            </p>
+            <div class="info-wrapper">
+                <img src="img/inspect-icon.jpg" alt="帳號圖示" class="info-icon" />
+                <p>
+                    歡迎莅臨此處重置你忘記的密碼。<br />
+                    基於安全考量，我們會詢問你幾個<br />問題，以驗證你確實擁有此帳號。
+                </p>
+            </div>
         </div>
-    </div>
 </main>
 
 
@@ -105,5 +107,6 @@
             </div>
         </div>
 </footer>
+<script src="apple.js"></script>
 </body>
 </html>
