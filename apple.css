@@ -113,6 +113,10 @@ body {
     padding: 1rem;
     margin: -0.5rem;
 }
+.navbar-subtitle1 a {
+    text-decoration: none;
+    color: #111;
+}
 
 /* 右：登入、常見問題集 */
 .navbar-subtitle2 {

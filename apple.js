@@ -1,113 +1,16 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
-    <meta charset="UTF-8">
-    <title>重置密碼</title>
-    <link rel="stylesheet" href="apple.css">
-</head>
-<body class="reset-page">
-<!-- 🔹 上方兩列導覽列 -->
-<header class="navbar">
-    <div class="navbar-top">
-        <div class="nav-section nav-left">
-            <a href="https://www.apple.com/tw/" target="_blank">
-                <img src="img/apple-logo.png" alt="Apple Logo" />
-            </a>
-        </div>
-        <!-- 第一列 -->
-        <ul class="nav-section nav-center">
-            <li><a href="#">商店</a></li>
-            <li><a href="#">Mac</a></li>
-            <li><a href="#">iPad</a></li>
-            <li><a href="#">iPhone</a></li>
-            <li><a href="#">Watch</a></li>
-            <li><a href="#">AirPods</a></li>
-            <li><a href="#">TV 和家庭</a></li>
-            <li><a href="#">娛樂</a></li>
-            <li><a href="#">配件</a></li>
-            <li><a href="#">支援服務</a></li>
-        </ul>
+const accountInput = document.getElementById('account');
+const passwordInput = document.getElementById('password');
+const submitBtn = document.getElementById('submitBtn');
 
-        <ul class="nav-section nav-right">
-            <li><img src="img/search.png" alt="搜尋" /></li>
-            <li><img src="img/bag.png" alt="購物車" /></li>
-        </ul>
-    </div>
-    <!-- 第二列 -->
-    <div class="navbar-bottom">
-        <div class="navbar-subtitle-container">
-            <div class="navbar-subtitle1">Apple 帳號</div>
-            <div class="navbar-subtitle2">
-                <a href="#">登入</a>
-                <a href="#">常見問題集</a>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- 🔹 主區塊可放其他內容 -->
+function validateInput() {
+    const account = accountInput.value.trim();
+    const password = passwordInput.value.trim();
 
-<main class="main">
-    <div class="reset-container">
-        <!-- 左邊輸入區塊 -->
-        <div class="reset-form">
-            <h1>重置密碼</h1>
-            <p>請輸入帳號使用的電子郵件地址或電話號碼以繼續。</p>
-<!--            新增輸入的提示-->
-            <input type="text" id="account" placeholder="電子郵件地址或電話號碼" class="input-field" />
-            <input type="password" id="password" placeholder="請輸入密碼" class="input-field" />
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(account);
+    const isValidPassword = password.length >= 8;
 
-            <!--            <input type="text" placeholder="請輸入圖中的字元" class="input-field" />-->
-<!--            <div class="captcha-row">-->
-<!--                <img src="img/new-code.jpg" alt="驗證碼" class="captcha-img" />-->
-<!--                <div class="captcha-links">-->
-<!--                    <img src="img/new-code1.jpg" alt="驗證碼" class="captcha-img" />-->
-<!--                </div>-->
-<!--            </div>-->
+    submitBtn.disabled = !(isValidEmail && isValidPassword);
+}
 
-            <button class="button" id="submitBtn" disabled>繼續</button>
-        </div>
-
-        <!-- 右邊說明區塊 -->
-        <div class="reset-info">
-            <div class="info-wrapper">
-                <img src="img/inspect-icon.jpg" alt="帳號圖示" class="info-icon" />
-                <p>
-                    歡迎莅臨此處重置你忘記的密碼。<br />
-                    基於安全考量，我們會詢問你幾個<br />問題，以驗證你確實擁有此帳號。
-                </p>
-            </div>
-        </div>
-    </div>
-</main>
-
-
-<!-- 頁尾 -->
-<footer class="footer">
-    <div class="footer-content">
-
-        <p class="footer-note">
-            更多選購方式：<a href="#">尋找當地的 Apple 直營店或其他零售商</a>，或致電 0800-020-021。
-        </p>
-
-        <!-- 這整行會排成一橫列 -->
-        <div class="footer-bottom-row">
-            <div class="footer-bottom-row">
-                <p class="footer-copy">
-                    © 2025 Apple Inc. 保留一切權利。
-                </p>
-                <ul class="footer-links">
-                    <li><a href="#">隱私權政策</a></li>
-                    <li><a href="#">使用條款</a></li>
-                    <li><a href="#">銷售及退款</a></li>
-                    <li><a href="#">法律聲明</a></li>
-                    <li><a href="#">網站地圖</a></li>
-                </ul>
-            </div>
-            <div class="footer-location">
-                <li><a href="#">台灣</a></li>
-            </div>
-        </div>
-</footer>
-<script src="apple.js"></script>
-</body>
-</html>
+accountInput.addEventListener('input', validateInput);
+passwordInput.addEventListener('input', validateInput);
