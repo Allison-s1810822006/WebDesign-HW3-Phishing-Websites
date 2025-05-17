@@ -247,3 +247,74 @@ body {
     list-style: none;         /* 移除點點 */
     text-decoration: none;    /* 移除底線 */
 }
+
+
+/*重置密碼頁面*/
+.reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.reset-form {
+    flex: 1;
+    max-width: 400px;
+}
+
+.reset-form h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.reset-form p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.captcha-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.captcha-img {
+    height: 40px;
+}
+
+.captcha-links a {
+    display: block;
+    color: #06c;
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.reset-info {
+    flex: 1;
+    max-width: 320px;
+    border-left: 1px solid #ccc;
+    padding-left: 2rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.info-icon {
+    width: 48px;
+    margin-bottom: 1rem;
+}

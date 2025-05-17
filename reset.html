@@ -45,21 +45,39 @@
     </div>
 </header>
 <!-- 🔹 主區塊可放其他內容 -->
+
 <main class="main">
-    <h1 style="font-weight: bold;">重置密碼</h1>
-    <p>請輸入帳號使用的電子郵件地址或電話號碼以繼續。</p>
+    <div class="reset-container">
+        <!-- 左邊輸入區塊 -->
+        <div class="reset-form">
+            <h1>重置密碼</h1>
+            <p>請輸入帳號使用的電子郵件地址或電話號碼以繼續。</p>
 
-    <input type="text" placeholder="電子郵件地址或電話號碼" style="display:block; margin: 1rem auto; padding: 0.5rem; width: 300px;">
-    <input type="text" placeholder="請輸入圖片中的字元" style="display:block; margin: 1rem auto; padding: 0.5rem; width: 300px;">
+            <input type="text" placeholder="電子郵件地址或電話號碼" class="input-field" />
+            <input type="text" placeholder="請輸入圖中的字元" class="input-field" />
 
-    <div style="margin-bottom: 1rem;">
-        <img src="img/captcha.png" alt="驗證碼" style="height: 40px;">
-        <a href="#">新代碼</a> |
-        <a href="#">視覺障礙</a>
+            <div class="captcha-row">
+                <img src="img/new-code.jpg" alt="驗證碼" class="captcha-img" />
+                <div class="captcha-links">
+                    <img src="img/new-code1.jpg" alt="驗證碼" class="captcha-img" />
+                </div>
+            </div>
+
+            <button class="button">繼續</button>
+        </div>
+
+        <!-- 右邊說明區塊 -->
+        <div class="reset-info">
+            <img src="img/inspect-icon.jpg" alt="帳號圖示" class="info-icon" />
+            <p>
+                歡迎莅臨此處重置你忘記的密碼。<br />
+                基於安全考量，我們會詢問你幾個問題，以驗證你確實擁有此帳號。
+            </p>
+        </div>
     </div>
-
-    <button class="button">繼續</button>
 </main>
+
+
 <!-- 頁尾 -->
 <footer class="footer">
     <div class="footer-content">
